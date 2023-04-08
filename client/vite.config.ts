@@ -9,4 +9,8 @@ export default defineConfig({
   build: {
     target: 'esnext',
   },
+  // To fix React is not defined with Provider
+  optimizeDeps: {
+    exclude: ['@tanstack/solid-query']
+ }
 });

@@ -1,7 +1,9 @@
 import { pipe, Repeater, map, createPubSub } from "graphql-yoga";
 import { Resolvers } from "../../resolvers-types";
+import { PubSub } from "graphql-subscriptions";
 
 const pubSub = createPubSub();
+// const pubSub = new PubSub();
 
 const TODOS_CHANNEL = "TODOS_CHANNEL";
 
@@ -40,10 +42,13 @@ export const todoResolvers: Resolvers = {
           //   return todos;
           // })
         ),
-        // subscribe: () => pubSub.asyncIterator([TODOS_CHANNEL]),
-      resolve: (value: any) => {
+      // subscribe: () => pubSub.asyncIterator([TODOS_CHANNEL]) as any,
+      // subscribe: () => ({
+      //   [Symbol.asyncIterator]: () => pubSub.asyncIterator([TODOS_CHANNEL]),
+      // }),
+      resolve: (value: typeof todos) => {
         // pubSub.publish(TODOS_CHANNEL, { todos });
-        console.log({ value })
+        console.log({ value });
         return value;
       },
     },
@@ -56,6 +61,7 @@ export const todoResolvers: Resolvers = {
         done: false,
       };
       todos.push(newTodo);
+      console.log(newTodo);
       pubSub.publish(TODOS_CHANNEL, { todos });
       return newTodo;
     },

@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@apollo/client': ^3.7.11
+  '@tanstack/solid-query': ^4.27.0
   '@urql/core': ^4.0.3
   apollo-link-http: ^1.5.17
   graphql-ws: ^5.12.1
@@ -22,6 +23,7 @@ dependencies:
 
 devDependencies:
   '@apollo/client': 3.7.11_pilerpdrmphlm6jvapj2celybi
+  '@tanstack/solid-query': 4.27.0_solid-js@1.6.10
   apollo-link-http: 1.5.17_graphql@15.8.0
   typescript: 4.9.5
   vite: 4.1.1
@@ -635,6 +637,19 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
+  /@tanstack/query-core/4.27.0:
+    resolution: {integrity: sha512-sm+QncWaPmM73IPwFlmWSKPqjdTXZeFf/7aEmWh00z7yl2FjqophPt0dE1EHW9P1giMC5rMviv7OUbSDmWzXXA==}
+    dev: true
+
+  /@tanstack/solid-query/4.27.0_solid-js@1.6.10:
+    resolution: {integrity: sha512-4Cfxt1T01QawjBx0dpGeNcFd3E+pvW8Ror3xHMX+YDSjiC/ADuwhbELNiNP8O0DLxxY1SW4vZxC2Ifd8yDEC2g==}
+    peerDependencies:
+      solid-js: ^1.5.7
+    dependencies:
+      '@tanstack/query-core': 4.27.0
+      solid-js: 1.6.10
     dev: true
 
   /@urql/core/4.0.3_graphql@15.8.0:
