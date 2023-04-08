@@ -1,0 +1,13 @@
+lockfileVersion: 5.4
+
+specifiers:
+  wonka: ^6.3.1
+
+dependencies:
+  wonka: 6.3.1
+
+packages:
+
+  /wonka/6.3.1:
+    resolution: {integrity: sha512-nJyGPcjuBiaLFn8QAlrHd+QjV9AlPO7snOWAhgx6aX0nQLMV6Wi0nqfrkmsXIH0efngbDOroOz2QyLnZMF16Hw==}
+    dev: false

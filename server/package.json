@@ -4,17 +4,28 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec ts-node-esm ./index.ts"
+    "dev": "nodemon --exec ts-node-esm ./index.ts",
+    "generate": "graphql-codegen"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@graphql-tools/load-files": "^6.6.1",
+    "@graphql-tools/merge": "^8.4.0",
+    "@graphql-tools/schema": "^9.0.17",
     "@types/node": "*",
+    "@types/ws": "^8.5.4",
+    "graphql": "^16.6.0",
+    "graphql-ws": "^5.12.1",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.3",
+    "ws": "^8.13.0"
   },
   "dependencies": {
+    "@graphql-codegen/cli": "^3.3.0",
+    "@graphql-codegen/typescript": "^3.0.3",
+    "@graphql-codegen/typescript-resolvers": "^3.2.0",
     "graphql-yoga": "^3.8.0",
     "nodemon": "^2.0.22"
   }
